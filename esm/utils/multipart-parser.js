@@ -1,5 +1,5 @@
-import {File} from 'fetch-blob/from.js';
-import {FormData} from 'formdata-polyfill/esm.min.js';
+import {File} from '@esm2cjs/fetch-blob/from.js';
+import {FormData} from '@esm2cjs/formdata-polyfill';
 
 let s = 0;
 const S = {

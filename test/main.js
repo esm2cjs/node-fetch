@@ -25,15 +25,15 @@ import fetch, {
 	Headers,
 	Request,
 	Response
-} from '../src/index.js';
-import {FetchError as FetchErrorOrig} from '../src/errors/fetch-error.js';
-import HeadersOrig, {fromRawHeaders} from '../src/headers.js';
-import RequestOrig from '../src/request.js';
-import ResponseOrig from '../src/response.js';
-import Body, {getTotalBytes, extractContentType} from '../src/body.js';
+} from '../esm/index.js';
+import {FetchError as FetchErrorOrig} from '../esm/errors/fetch-error.js';
+import HeadersOrig, {fromRawHeaders} from '../esm/headers.js';
+import RequestOrig from '../esm/request.js';
+import ResponseOrig from '../esm/response.js';
+import Body, {getTotalBytes, extractContentType} from '../esm/body.js';
 import TestServer from './utils/server.js';
 import chaiTimeout from './utils/chai-timeout.js';
-import {isDomainOrSubdomain, isSameProtocol} from '../src/utils/is.js';
+import {isDomainOrSubdomain, isSameProtocol} from '../esm/utils/is.js';
 
 const AbortControllerPolyfill = abortControllerPolyfill.AbortController;
 const encoder = new TextEncoder();

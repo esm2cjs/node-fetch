@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../esm/utils/is-redirect.js"],
+  "sourcesContent": ["const redirectStatus = new Set([301, 302, 303, 307, 308]);\n\n/**\n * Redirect code matching\n *\n * @param {number} code - Status code\n * @return {boolean}\n */\nexport const isRedirect = code => {\n\treturn redirectStatus.has(code);\n};\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,MAAM,iBAAiB,oBAAI,IAAI,CAAC,KAAK,KAAK,KAAK,KAAK,GAAG,CAAC;AAQjD,MAAM,aAAa,UAAQ;AACjC,SAAO,eAAe,IAAI,IAAI;AAC/B;",
+  "names": []
+}

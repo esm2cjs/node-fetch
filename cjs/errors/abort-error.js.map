@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../esm/errors/abort-error.js"],
+  "sourcesContent": ["import {FetchBaseError} from './base.js';\n\n/**\n * AbortError interface for cancelled requests\n */\nexport class AbortError extends FetchBaseError {\n\tconstructor(message, type = 'aborted') {\n\t\tsuper(message, type);\n\t}\n}\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,kBAA6B;AAKtB,MAAM,mBAAmB,2BAAe;AAAA,EAC9C,YAAY,SAAS,OAAO,WAAW;AACtC,UAAM,SAAS,IAAI;AAAA,EACpB;AACD;",
+  "names": []
+}

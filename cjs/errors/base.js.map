@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../esm/errors/base.js"],
+  "sourcesContent": ["export class FetchBaseError extends Error {\n\tconstructor(message, type) {\n\t\tsuper(message);\n\t\t// Hide custom error implementation details from end-users\n\t\tError.captureStackTrace(this, this.constructor);\n\n\t\tthis.type = type;\n\t}\n\n\tget name() {\n\t\treturn this.constructor.name;\n\t}\n\n\tget [Symbol.toStringTag]() {\n\t\treturn this.constructor.name;\n\t}\n}\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAO,MAAM,uBAAuB,MAAM;AAAA,EACzC,YAAY,SAAS,MAAM;AAC1B,UAAM,OAAO;AAEb,UAAM,kBAAkB,MAAM,KAAK,WAAW;AAE9C,SAAK,OAAO;AAAA,EACb;AAAA,EAEA,IAAI,OAAO;AACV,WAAO,KAAK,YAAY;AAAA,EACzB;AAAA,EAEA,KAAK,OAAO,eAAe;AAC1B,WAAO,KAAK,YAAY;AAAA,EACzB;AACD;",
+  "names": []
+}

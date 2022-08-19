@@ -1,7 +1,7 @@
 /// <reference types="node" />
 
 import {RequestOptions} from 'http';
-import {FormData} from 'formdata-polyfill/esm.min.js';
+import {FormData} from '@esm2cjs/formdata-polyfill';
 import {
 	Blob,
 	blobFrom,
@@ -9,7 +9,7 @@ import {
 	File,
 	fileFrom,
 	fileFromSync
-} from 'fetch-blob/from.js';
+} from '@esm2cjs/fetch-blob/from.js';
 
 type AbortSignal = {
 	readonly aborted: boolean;

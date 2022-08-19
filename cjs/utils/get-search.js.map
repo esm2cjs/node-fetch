@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../esm/utils/get-search.js"],
+  "sourcesContent": ["export const getSearch = parsedURL => {\n\tif (parsedURL.search) {\n\t\treturn parsedURL.search;\n\t}\n\n\tconst lastOffset = parsedURL.href.length - 1;\n\tconst hash = parsedURL.hash || (parsedURL.href[lastOffset] === '#' ? '#' : '');\n\treturn parsedURL.href[lastOffset - hash.length] === '?' ? '?' : '';\n};\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAO,MAAM,YAAY,eAAa;AACrC,MAAI,UAAU,QAAQ;AACrB,WAAO,UAAU;AAAA,EAClB;AAEA,QAAM,aAAa,UAAU,KAAK,SAAS;AAC3C,QAAM,OAAO,UAAU,SAAS,UAAU,KAAK,gBAAgB,MAAM,MAAM;AAC3E,SAAO,UAAU,KAAK,aAAa,KAAK,YAAY,MAAM,MAAM;AACjE;",
+  "names": []
+}

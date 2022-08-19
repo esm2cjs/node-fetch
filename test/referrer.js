@@ -1,11 +1,11 @@
 import chai from 'chai';
 
-import fetch, {Request, Headers} from '../src/index.js';
+import fetch, {Request, Headers} from '../esm/index.js';
 import {
 	DEFAULT_REFERRER_POLICY, ReferrerPolicy, stripURLForUseAsAReferrer, validateReferrerPolicy,
 	isOriginPotentiallyTrustworthy, isUrlPotentiallyTrustworthy, determineRequestsReferrer,
 	parseReferrerPolicyFromHeader
-} from '../src/utils/referrer.js';
+} from '../esm/utils/referrer.js';
 import TestServer from './utils/server.js';
 
 const {expect} = chai;

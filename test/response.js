@@ -1,6 +1,6 @@
 import * as stream from 'node:stream';
 import chai from 'chai';
-import {Response, Blob} from '../src/index.js';
+import {Response, Blob} from '../esm/index.js';
 import TestServer from './utils/server.js';
 
 const {expect} = chai;

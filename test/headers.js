@@ -1,7 +1,7 @@
 import {format} from 'node:util';
 import chai from 'chai';
 import chaiIterator from 'chai-iterator';
-import {Headers} from '../src/index.js';
+import {Headers} from '../esm/index.js';
 
 chai.use(chaiIterator);
 

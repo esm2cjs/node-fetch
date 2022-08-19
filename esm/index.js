@@ -12,7 +12,7 @@ import zlib from 'node:zlib';
 import Stream, {PassThrough, pipeline as pump} from 'node:stream';
 import {Buffer} from 'node:buffer';
 
-import dataUriToBuffer from 'data-uri-to-buffer';
+import dataUriToBuffer from '@esm2cjs/data-uri-to-buffer';
 
 import {writeToStream, clone} from './body.js';
 import Response from './response.js';
@@ -21,7 +21,7 @@ import Request, {getNodeRequestOptions} from './request.js';
 import {FetchError} from './errors/fetch-error.js';
 import {AbortError} from './errors/abort-error.js';
 import {isRedirect} from './utils/is-redirect.js';
-import {FormData} from 'formdata-polyfill/esm.min.js';
+import {FormData} from '@esm2cjs/formdata-polyfill';
 import {isDomainOrSubdomain, isSameProtocol} from './utils/is.js';
 import {parseReferrerPolicyFromHeader} from './utils/referrer.js';
 import {
@@ -31,7 +31,7 @@ import {
 	fileFrom,
 	blobFromSync,
 	blobFrom
-} from 'fetch-blob/from.js';
+} from '@esm2cjs/fetch-blob/from.js';
 
 export {FormData, Headers, Request, Response, FetchError, AbortError, isRedirect};
 export {Blob, File, fileFromSync, fileFrom, blobFromSync, blobFrom};

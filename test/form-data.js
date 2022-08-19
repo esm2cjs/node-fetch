@@ -1,6 +1,6 @@
 import {FormData as FormDataNode} from 'formdata-node';
 import chai from 'chai';
-import {Request, Response, FormData, Blob} from '../src/index.js';
+import {Request, Response, FormData, Blob} from '../esm/index.js';
 
 const {expect} = chai;
 

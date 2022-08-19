@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../esm/errors/fetch-error.js"],
+  "sourcesContent": ["\nimport {FetchBaseError} from './base.js';\n\n/**\n * @typedef {{ address?: string, code: string, dest?: string, errno: number, info?: object, message: string, path?: string, port?: number, syscall: string}} SystemError\n*/\n\n/**\n * FetchError interface for operational errors\n */\nexport class FetchError extends FetchBaseError {\n\t/**\n\t * @param  {string} message -      Error message for human\n\t * @param  {string} [type] -        Error type for machine\n\t * @param  {SystemError} [systemError] - For Node.js system error\n\t */\n\tconstructor(message, type, systemError) {\n\t\tsuper(message, type);\n\t\t// When err.type is `system`, err.erroredSysCall contains system error and err.code contains system error code\n\t\tif (systemError) {\n\t\t\t// eslint-disable-next-line no-multi-assign\n\t\t\tthis.code = this.errno = systemError.code;\n\t\t\tthis.erroredSysCall = systemError.syscall;\n\t\t}\n\t}\n}\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AACA,kBAA6B;AAStB,MAAM,mBAAmB,2BAAe;AAAA,EAM9C,YAAY,SAAS,MAAM,aAAa;AACvC,UAAM,SAAS,IAAI;AAEnB,QAAI,aAAa;AAEhB,WAAK,OAAO,KAAK,QAAQ,YAAY;AACrC,WAAK,iBAAiB,YAAY;AAAA,IACnC;AAAA,EACD;AACD;",
+  "names": []
+}
