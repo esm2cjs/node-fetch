@@ -104,6 +104,20 @@ class Response extends import_body.default {
     response[INTERNALS].type = "error";
     return response;
   }
+  static json(data = void 0, init = {}) {
+    const body = JSON.stringify(data);
+    if (body === void 0) {
+      throw new TypeError("data is not JSON serializable");
+    }
+    const headers = new import_headers.default(init && init.headers);
+    if (!headers.has("content-type")) {
+      headers.set("content-type", "application/json");
+    }
+    return new Response(body, {
+      ...init,
+      headers
+    });
+  }
   get [Symbol.toStringTag]() {
     return "Response";
   }
